@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html>
+  <meta charset="utf-8">
+  <head>
+    <title="js_practice1">
+
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      document.write("<h>hello</h>");
+      document.write("<p>hello&nbsp;<em>d</em></p>");
+
+      function change(){
+        document.getElementById("t1").innerHTML = " good ";
+      }
+
+      function changeBulb(){
+        var sts = document.getElementById("bulbimg");
+        reg = /(eg)*\_+(bulboff)+/;
+        msg = sts.src;
+
+        if(reg.test(msg)){                  // 存在就可以，即;这里也可以写 sts.src.match("bulboff")
+          sts.src = "eg_bulbon.gif";
+        }else{
+          sts.src = "eg_bulboff.gif"
+        }
+      }
+
+      function number_input(){
+        x = document.getElementById("number_input").value;
+        if (x === '' || isNaN(x)){
+          alert("not number");
+        }
+      }
+    </script>
+    <button onclick="alert('hello')">click to alert</button> <!-- alert用于测试很方便-->
+    <button onclick="change()">click to change inner html</button>
+    <p id="t1">bad</p>
+
+    <img width="25px" height="40px"id="bulbimg" onclick="changeBulb()" src="./eg_bulboff.gif" alt="bulb"/>
+    <input id="number_input" type="text"/><button onclick="number_input()">click to check</button>
+
+
+  </body>
+</html>

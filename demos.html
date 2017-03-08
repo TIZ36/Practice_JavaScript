@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="text" style="width:50%;height:300px;float:left;">
+      <div class="demo1">
+        <h4> document.write </h4>
+        <textarea style="width:90%;height:145px;">
+
+          <body>
+            <script type="text/javascript">
+              document.write("<h>hello</h>");
+              document.write("<p><em>javascript</em></p>");
+            </script>
+          </body>
+
+        </textarea>
+    </div>
+
+    <div class="demo2">
+      <h4> Simple onclick </h4>
+      <textarea style="width:90%;height:145px;">
+
+        <!DOCTYPE>
+        <html>
+          <meta charset="utf-8">
+          <head>
+            <title="js_practice1">
+            <script type="text/javascript">
+              function change(){
+                document.getElementById("t1").innerHTML = " good ";
+              }
+            </script>
+          </head>
+          <body>
+            <button onclick="alert('hello')">click to alert</button> <!-- alert用于测试很方便-->
+            <br/>
+            <button onclick="change()">click to change inner html</button>
+            <p id="t1">bad</p>
+          </body>
+        </html>
+
+      </textarea>
+  </div>
+
+  <div class="demo3">
+    <h4> change img </h4>
+    <textarea style="width:90%;height:145px;">
+      <!DOCTYPE>
+      <html>
+        <meta charset="utf-8">
+        <head>
+          <title="js_practice1">
+          <script type="text/javascript">
+            function changeBulb(){
+              var sts = document.getElementById("bulbimg");
+              reg = /(eg)*\_+(bulboff)+/;
+              msg = sts.src;
+
+              if(reg.test(msg)){                  // 存在就可以，即;这里也可以写 sts.src.match("bulboff")
+                sts.src = "eg_bulbon.gif";
+              }else{
+                sts.src = "eg_bulboff.gif"
+              }
+            }
+          </script>
+        </head>
+
+        <body>
+          <img width="25px" height="40px"id="bulbimg" onclick="changeBulb()" src="./eg_bulboff.gif" alt="bulb"/>    </body>
+      </html>
+
+    </textarea>
+</div>
+
+<div class="demo4">
+  <h4> check if number </h4>
+  <textarea style="width:90%;height:145px;">
+    ...
+    isNaN(x);
+    ...
+  </textarea>
+</div>
+
+<div class="demo5">
+  <h4> </h4>
+  <textarea style="width:90%;height:145px;">
+  </textarea>
+</div>
+<div class="demo3">
+  <h4> </h4>
+  <textarea style="width:90%;height:145px;">
+  </textarea>
+</div>
+<div class="demo3">
+  <h4> </h4>
+  <textarea style="width:90%;height:145px;">
+  </textarea>
+</div>
+<div class="demo3">
+  <h4></h4>
+  <textarea style="width:90%;height:145px;">
+  </textarea>
+</div>
+<div class="demo3">
+  <h4> </h4>
+  <textarea style="width:90%;height:145px;">
+  </textarea>
+</div>
+<div class="demo3">
+  <h4></h4>
+  <textarea style="width:90%;height:145px;">
+  </textarea>
+</div>
+<div class="demo3">
+  <h4> </h4>
+  <textarea style="width:90%;height:145px;">
+  </textarea>
+</div>
+<div class="demo3">
+  <h4> </h4>
+  <textarea style="width:90%;height:145px;">
+  </textarea>
+</div>
+
+
+
+    </div>
+
+    <div id="show" style="width:50%;height:300px;float:right;">
+      <div class="demo1">
+        <h4> show result here:</h4>
+        <iframe frameborder="0" src="./demos/demo1.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+
+      <div class="demo2">
+        <h4> show result here:</h4>
+        <iframe frameborder="0" src="./demos/demo2.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+
+      <div class="demo3">
+        <h4> show result here:</h4>
+        <iframe frameborder="0" src="./demos/demo3.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+
+      <div class="demo4">
+        <h4> show result here:</h4>
+        <iframe frameborder="0" src="./demos/demo4.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+      <div class="demo5">
+        <h4> show result here:</h4>
+        <iframe frameborder="0" src="./demos/demo5.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+      <div class="demo6">
+        <h4> show result here:</h4>
+        <iframe frameborder="0" src="./demos/demo6.html" style="border:1px solid grey; width:100%;"></iframe>
+      </div>
+    </div>
+  </body>
+</html>
