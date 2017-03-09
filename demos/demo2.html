@@ -7,6 +7,10 @@
       function change(){
         document.getElementById("t1").innerHTML = " good ";
       }
+      function u(){
+        var c = document.getElementById('t2');
+        c.value = c.value.toUpperCase();
+      }
     </script>
   </head>
   <body>
@@ -14,5 +18,7 @@
     <br/>
     <button onclick="change()">click to change inner html</button>
     <p id="t1">bad</p>
+
+    <p>输入英文字母，离开时变成大写</p><input id="t2" onchange="u()"/>
   </body>
 </html>
